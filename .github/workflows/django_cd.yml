@@ -57,7 +57,7 @@ jobs:
     - name: Deploy
       uses: okteto/pipeline@2.7.0
       with:
-         name: ${{ secrets.MODEL_NAME }}
+         name: i2k3
          timeout: 10m
          #variables: "DEV_USER=${{ secrets.DEV_USER }}"
 
