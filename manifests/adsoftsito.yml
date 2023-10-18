@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: graphql-adsoftsito
+  name: graphql-i2k3
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: graphql-adsoftsito
+      app: graphql-i2k3
   template:
     metadata:
       labels:
-        app: graphql-adsoftsito
+        app: graphql-i2k3
     spec:
       containers:
-      - image: okteto.dev/graphql-adsoftsito:latest
-        name: adsoftsito
-        envFrom:
-        - configMapRef:
-            name: adsoftsito-config
+      - image: okteto.dev/i2k3:latest
+        name: i2k3
+        #envFrom:
+        #configMapRef:
+        #name: i2k3-config
         livenessProbe:
           httpGet:
             path: /ht/
@@ -29,13 +29,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: graphql-adsoftsito
+  name: graphql-i2k3
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "graphql-adsoftsito"
+  - name: "graphql-i2k3"
     port: 8080
   selector:
-    app: graphql-adsoftsito
+    app: graphql-i2k3
