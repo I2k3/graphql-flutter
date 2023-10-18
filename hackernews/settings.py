@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'hackernews.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'hackernews2',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',
+        'NAME': 'graphql-flutter',
+        'USER': 'graphql-flutter',
+        'PASSWORD': 'Wynig5sWeK--qsZHUl9bYUdOWJRI3n08',
+        'HOST': 'chunee.db.elephantsql.com',
         'PORT': '5432',
     },
     'test': {
